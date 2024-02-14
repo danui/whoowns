@@ -3,11 +3,17 @@
     "name": "whoowns",
     "description": "Tells you who owns a website",
     "version": "0.1.0",
-    "permissions": ["scripting", "tabs"],
+    "permissions": ["scripting", "tabs", "notifications", "background"],
+    "action": {
+        "default_icon": "eyes.png"
+    },
     "content_scripts": [{
         "js": ["content-script.js"],
         "matches": [
             "https://*/*"
         ]
-    }]
+    }],
+    "background" : {
+        "service_worker" : "service-worker.js"
+    }
 }
