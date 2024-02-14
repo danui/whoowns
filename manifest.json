@@ -3,8 +3,11 @@
     "name": "whoowns",
     "description": "Tells you who owns a website",
     "version": "0.1.0",
-    "action": {
-        "default_popup": "whoowns.html",
-        "default_icon": "whoowns.png"
-    }
+    "permissions": ["scripting", "tabs"],
+    "content_scripts": [{
+        "js": ["content-script.js"],
+        "matches": [
+            "https://*/*"
+        ]
+    }]
 }
