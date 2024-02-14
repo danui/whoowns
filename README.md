@@ -12,6 +12,17 @@ Step 2 - Follow these instructions to load the extensions from your file system
 
 ## How it works
 
-The `manifest.json` file describes what goes into the extension. In this
-particular case, the extension runs `content-script.js` in the context of the
-loaded page. Thus we can access `window.location.host` and inspect that.
+The `manifest.json` file describes what goes into the extension.
+
+The extension runs `content-script.js` in the context of the loaded page.
+This gives it access to `window.location.host`.
+This is checked against a list of known domains.
+When a match is found, a message is sent.
+
+The extension also runs a `service-worker.js` in the background.
+This listens for messages.
+When a message is received of the `notification` type, it sends a notification.
+
+Example Singpass notification shown below...
+
+![Screenshot of Singpass Notification](screenshot.png)
