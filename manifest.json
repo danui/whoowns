@@ -1,0 +1,13 @@
+{
+    "manifest_version": 3,
+    "name": "whoowns",
+    "description": "Tells you who owns a website",
+    "version": "0.1.0",
+    "permissions": ["scripting", "tabs"],
+    "content_scripts": [{
+        "js": ["content-script.js"],
+        "matches": [
+            "https://*/*"
+        ]
+    }]
+}
