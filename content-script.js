@@ -35,6 +35,11 @@ const mappings = [
         message: "You are visiting Standard Charted",
         logo: "logos/scb.jpeg",
     },
+    {
+        domain: "singpass.gov.sg",
+        message: "You are visiting Singpass",
+        logo: "logos/singpass.png",
+    },
 ];
 
 mappings.forEach((mapping) => {
